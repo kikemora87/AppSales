@@ -19,8 +19,12 @@ const routes: Routes = [
     component: MetaComponent
   },
   {
+    path: "app",
+    component: PageComponent
+  },
+  {
     path: '**',
-    redirectTo: 'dasboardGen'
+    redirectTo: 'app'
   }
 ];
 
