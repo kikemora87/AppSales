@@ -7,24 +7,26 @@ import { MetaComponent } from './components/meta/meta.component';
 
 const routes: Routes = [
   {
-    path: "dasboardGen",
-    component: DasboardComponent
-  },
-  {
-    path: "dasboardVend",
-    component: DashvendComponent
-  },
-  {
-    path: "meta",
-    component: MetaComponent
-  },
-  {
-    path: "app",
-    component: PageComponent
-  },
-  {
-    path: '**',
-    redirectTo: 'app'
+    path: "",
+    component: PageComponent,
+    children:[
+      {
+        path: "dasboardGen",
+        component: DasboardComponent
+      },
+      {
+        path: "dasboardVend",
+        component: DashvendComponent
+      },
+      {
+        path: "meta",
+        component: MetaComponent
+      },
+      {
+        path: '**',
+        redirectTo: 'dasboardGen'
+      }
+    ]
   }
 ];
 
